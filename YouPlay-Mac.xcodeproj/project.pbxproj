@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811BB1C81C4A1B9B0032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
+		811BB1C91C4A1BE60032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
+		811BB1CA1C4A1BE60032F75D /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		812E2AB01C3788360007F852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AAF1C3788360007F852 /* AppDelegate.swift */; };
 		812E2AB21C3788360007F852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB11C3788360007F852 /* ViewController.swift */; };
 		812E2AB51C3788360007F852 /* YouPlay_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB31C3788360007F852 /* YouPlay_Mac.xcdatamodeld */; };
@@ -14,7 +17,22 @@
 		812E2ABA1C3788360007F852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812E2AB81C3788360007F852 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		811BB1CB1C4A1BE60032F75D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				811BB1CA1C4A1BE60032F75D /* VLCKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		811BB1C71C4A1B9B0032F75D /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
 		812E2AAC1C3788360007F852 /* YouPlay-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouPlay-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		812E2AAF1C3788360007F852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		812E2AB11C3788360007F852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,15 +47,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811BB1C81C4A1B9B0032F75D /* VLCKit.framework in Frameworks */,
+				811BB1C91C4A1BE60032F75D /* VLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811BB1BE1C4A18B60032F75D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				812E2AB31C3788360007F852 /* YouPlay_Mac.xcdatamodeld */,
+				812E2ABB1C3788360007F852 /* Info.plist */,
+				812E2AB81C3788360007F852 /* Main.storyboard */,
+				812E2AB61C3788360007F852 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		811BB1BF1C4A18C30032F75D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				812E2AAF1C3788360007F852 /* AppDelegate.swift */,
+				812E2AB11C3788360007F852 /* ViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		811BB1C01C4A18CB0032F75D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				811BB1C71C4A1B9B0032F75D /* VLCKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		812E2AA31C3788360007F852 = {
 			isa = PBXGroup;
 			children = (
+				811BB1C01C4A18CB0032F75D /* Frameworks */,
 				812E2AAE1C3788360007F852 /* YouPlay-Mac */,
 				812E2AAD1C3788360007F852 /* Products */,
 			);
@@ -54,12 +103,8 @@
 		812E2AAE1C3788360007F852 /* YouPlay-Mac */ = {
 			isa = PBXGroup;
 			children = (
-				812E2AAF1C3788360007F852 /* AppDelegate.swift */,
-				812E2AB11C3788360007F852 /* ViewController.swift */,
-				812E2AB61C3788360007F852 /* Assets.xcassets */,
-				812E2AB81C3788360007F852 /* Main.storyboard */,
-				812E2ABB1C3788360007F852 /* Info.plist */,
-				812E2AB31C3788360007F852 /* YouPlay_Mac.xcdatamodeld */,
+				811BB1BF1C4A18C30032F75D /* Classes */,
+				811BB1BE1C4A18B60032F75D /* Resources */,
 			);
 			path = "YouPlay-Mac";
 			sourceTree = "<group>";
@@ -74,6 +119,7 @@
 				812E2AA81C3788360007F852 /* Sources */,
 				812E2AA91C3788360007F852 /* Frameworks */,
 				812E2AAA1C3788360007F852 /* Resources */,
+				811BB1CB1C4A1BE60032F75D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,7 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "YouPlay-Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.wujianguo.YouPlay-Mac";
@@ -250,7 +301,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "YouPlay-Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.wujianguo.YouPlay-Mac";
@@ -277,6 +333,7 @@
 				812E2AC01C3788360007F852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
