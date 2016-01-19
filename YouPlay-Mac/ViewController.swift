@@ -9,17 +9,52 @@
 import Cocoa
 import VLCKit
 
+//private let api = "https://youplay.leanapp.cn/api/v1"
+private let api = "http://127.0.0.1:8888/api/v1"
+
 class ViewController: NSViewController {
 
-    var player: VLCMediaPlayer?
+    var player: VLCMediaListPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let v = view as? VLCVideoView {
-            player = VLCMediaPlayer(videoView: v)
-            player?.media = VLCMedia(URL: NSURL(string: "http://119.147.17.153/videos/v0/20160113/72/3f/944ae550e326899cb775b41ade34e68b.f4v?key=063201557f936086fc55268f32e6df772&src=iqiyi.com&su=7c867f34c24e442cad3dda5a5f6f7eea&qyid=7a9afa08785a4cf38f8edc33f79828f1&client=&z=&bt=&ct=&tn=11258&uuid=b710073a-5699e562-66"))
-            player?.play()
+        player = VLCMediaListPlayer(drawable: view as! VLCVideoView)
+        play("http://www.iqiyi.com/v_19rrl5wsqk.html#vfrm=2-3-0-1")
+    }
+    
+    func parse(url: String, complete: ([String]) -> Void) {
+        let base64 = url.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        let remote = "\(api)/videos2/\(base64)"
+        print(remote)
+        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: remote)!) { (data, response, error) -> Void in
+            guard data != nil && error == nil else { return }
+            let json = JSON(data: data!)
+            var urls = [String]()
+            for en in json["entries"].arrayValue {
+                urls.append(en["url"].stringValue)
+            }
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                complete(urls)
+            }
+        }.resume()
+    }
+    
+    func play(url: String) {
+        player.mediaList = VLCMediaList(array: [])
+        parse(url) { (urls) -> Void in
+            self.updateUrls(urls)
         }
+    }
+    
+    func updateUrls(urls: [String]) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerTimeChanged:", name: VLCMediaPlayerTimeChanged, object: nil)
+        for i in 0..<urls.count {
+            player.mediaList.addMedia(VLCMedia(URL: NSURL(string: urls[urls.count-1-i])))
+        }
+        player.play()
+    }
+    
+    func playerTimeChanged(notification: NSNotification) {
+        print("playerTimeChanged: \(player.mediaPlayer.time), \(player.mediaPlayer.remainingTime)")
     }
 
     override var representedObject: AnyObject? {

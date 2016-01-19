@@ -10,6 +10,7 @@
 		811BB1C81C4A1B9B0032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
 		811BB1C91C4A1BE60032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
 		811BB1CA1C4A1BE60032F75D /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		811BB26B1C4CF90E0032F75D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */; };
 		812E2AB01C3788360007F852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AAF1C3788360007F852 /* AppDelegate.swift */; };
 		812E2AB21C3788360007F852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB11C3788360007F852 /* ViewController.swift */; };
 		812E2AB51C3788360007F852 /* YouPlay_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB31C3788360007F852 /* YouPlay_Mac.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		811BB1C71C4A1B9B0032F75D /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
+		811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		812E2AAC1C3788360007F852 /* YouPlay-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouPlay-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		812E2AAF1C3788360007F852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		812E2AB11C3788360007F852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		811BB1BF1C4A18C30032F75D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */,
 				812E2AAF1C3788360007F852 /* AppDelegate.swift */,
 				812E2AB11C3788360007F852 /* ViewController.swift */,
 			);
@@ -183,6 +186,7 @@
 				812E2AB21C3788360007F852 /* ViewController.swift in Sources */,
 				812E2AB01C3788360007F852 /* AppDelegate.swift in Sources */,
 				812E2AB51C3788360007F852 /* YouPlay_Mac.xcdatamodeld in Sources */,
+				811BB26B1C4CF90E0032F75D /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
