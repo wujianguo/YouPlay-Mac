@@ -658,25 +658,96 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="yFg-OX-pis" kind="relationship" relationship="window.shadowedContentViewController" id="3cV-3Z-W79"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Main Split View Controller-->
+        <scene sceneID="v5G-mJ-eHo">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="YouPlay_Mac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="VLCVideoView">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <splitViewController id="yFg-OX-pis" customClass="MainSplitViewController" customModule="YouPlay_Mac" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="GUv-mO-Rrg"/>
+                        <splitViewItem id="jiH-QL-nac"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="tIF-dT-DkN">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="OMz-lX-Q0k" kind="relationship" relationship="splitItems" id="d0x-gk-86f"/>
+                        <segue destination="5BG-CF-DEa" kind="relationship" relationship="splitItems" id="1q0-fw-kc3"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="vdh-Oa-RrC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="760"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s7v-6r-GOs">
+            <objects>
+                <viewController id="OMz-lX-Q0k" sceneMemberID="viewController">
+                    <view key="view" id="17z-Kx-2vV">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ZGz-SH-eRt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="584.5" y="579"/>
+        </scene>
+        <!--Movie List View Controller-->
+        <scene sceneID="Bd4-dp-CFr">
+            <objects>
+                <viewController id="5BG-CF-DEa" customClass="MovieListViewController" customModule="YouPlay_Mac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Z2f-kf-Dtb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2z-Ji-UjG">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" id="Tee-Q4-gZE">
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="3Av-43-eaW">
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Lqq-p3-hDe">
+                                                <size key="itemSize" width="250" height="125"/>
+                                                <edgeInsets key="sectionInset" left="8" right="8" top="8" bottom="8"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="20G-kU-wMb">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="p05-uY-QRb">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="e2z-Ji-UjG" firstAttribute="leading" secondItem="Z2f-kf-Dtb" secondAttribute="leading" id="eVa-4d-5nH"/>
+                            <constraint firstItem="e2z-Ji-UjG" firstAttribute="top" secondItem="Z2f-kf-Dtb" secondAttribute="top" id="ezG-FE-h4h"/>
+                            <constraint firstAttribute="bottom" secondItem="e2z-Ji-UjG" secondAttribute="bottom" id="mHV-ZK-F5S"/>
+                            <constraint firstAttribute="trailing" secondItem="e2z-Ji-UjG" secondAttribute="trailing" id="wLb-qj-1yJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="3Av-43-eaW" id="stV-KB-5Ib"/>
+                    </connections>
+                </viewController>
+                <customObject id="jtv-NE-0WG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="940"/>
         </scene>
     </scenes>
 </document>

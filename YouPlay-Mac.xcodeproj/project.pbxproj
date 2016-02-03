@@ -7,16 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811AE4591C4F60A3008A52C3 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811AE4581C4F60A3008A52C3 /* PlayerViewController.swift */; };
+		811AE4741C4F8243008A52C3 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AE46F1C4F8235008A52C3 /* SnapKit.framework */; };
+		811AE4751C4F8243008A52C3 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811AE46F1C4F8235008A52C3 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		811AE4791C4F829D008A52C3 /* PlayerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811AE4781C4F829D008A52C3 /* PlayerControllerView.swift */; };
 		811BB1C81C4A1B9B0032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
-		811BB1C91C4A1BE60032F75D /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; };
 		811BB1CA1C4A1BE60032F75D /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811BB1C71C4A1B9B0032F75D /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		811BB26B1C4CF90E0032F75D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */; };
 		812E2AB01C3788360007F852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AAF1C3788360007F852 /* AppDelegate.swift */; };
-		812E2AB21C3788360007F852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB11C3788360007F852 /* ViewController.swift */; };
 		812E2AB51C3788360007F852 /* YouPlay_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 812E2AB31C3788360007F852 /* YouPlay_Mac.xcdatamodeld */; };
 		812E2AB71C3788360007F852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812E2AB61C3788360007F852 /* Assets.xcassets */; };
 		812E2ABA1C3788360007F852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812E2AB81C3788360007F852 /* Main.storyboard */; };
+		816BAF351C61B38A007F6FC3 /* LabelCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BAF321C61B38A007F6FC3 /* LabelCollectionViewItem.swift */; };
+		816BAF361C61B38A007F6FC3 /* LabelCollectionViewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816BAF331C61B38A007F6FC3 /* LabelCollectionViewItemView.swift */; };
+		816BAF371C61B38A007F6FC3 /* LabelCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816BAF341C61B38A007F6FC3 /* LabelCollectionViewItem.xib */; };
+		818554411C61A1CB00D0C1EB /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818554401C61A1CB00D0C1EB /* MovieListViewController.swift */; };
+		81BAA6DE1C619C92002DEF54 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAA6DD1C619C92002DEF54 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		811AE46C1C4F8235008A52C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+		811AE46E1C4F8235008A52C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB37A1AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX";
+		};
+		811AE4701C4F8235008A52C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit iOS Tests";
+		};
+		811AE4721C4F8235008A52C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB3841AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX Tests";
+		};
+		811AE4761C4F8243008A52C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EECDB3791AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		811BB1CB1C4A1BE60032F75D /* Embed Frameworks */ = {
@@ -26,6 +71,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				811BB1CA1C4A1BE60032F75D /* VLCKit.framework in Embed Frameworks */,
+				811AE4751C4F8243008A52C3 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,15 +79,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		811AE4581C4F60A3008A52C3 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
+		811AE4781C4F829D008A52C3 /* PlayerControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerControllerView.swift; sourceTree = "<group>"; };
 		811BB1C71C4A1B9B0032F75D /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
 		811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		812E2AAC1C3788360007F852 /* YouPlay-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouPlay-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		812E2AAF1C3788360007F852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		812E2AB11C3788360007F852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		812E2AB41C3788360007F852 /* YouPlay_Mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouPlay_Mac.xcdatamodel; sourceTree = "<group>"; };
 		812E2AB61C3788360007F852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		812E2AB91C3788360007F852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		812E2ABB1C3788360007F852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		816BAF321C61B38A007F6FC3 /* LabelCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewItem.swift; sourceTree = "<group>"; };
+		816BAF331C61B38A007F6FC3 /* LabelCollectionViewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewItemView.swift; sourceTree = "<group>"; };
+		816BAF341C61B38A007F6FC3 /* LabelCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCollectionViewItem.xib; sourceTree = "<group>"; };
+		818554401C61A1CB00D0C1EB /* MovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		81BAA6DD1C619C92002DEF54 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,14 +102,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811AE4741C4F8243008A52C3 /* SnapKit.framework in Frameworks */,
 				811BB1C81C4A1B9B0032F75D /* VLCKit.framework in Frameworks */,
-				811BB1C91C4A1BE60032F75D /* VLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811AE4661C4F8235008A52C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				811AE46D1C4F8235008A52C3 /* SnapKit.framework */,
+				811AE46F1C4F8235008A52C3 /* SnapKit.framework */,
+				811AE4711C4F8235008A52C3 /* SnapKit iOS Tests.xctest */,
+				811AE4731C4F8235008A52C3 /* SnapKit OSX Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		811BB1BE1C4A18B60032F75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +137,13 @@
 			children = (
 				811BB26A1C4CF90E0032F75D /* SwiftyJSON.swift */,
 				812E2AAF1C3788360007F852 /* AppDelegate.swift */,
-				812E2AB11C3788360007F852 /* ViewController.swift */,
+				811AE4581C4F60A3008A52C3 /* PlayerViewController.swift */,
+				811AE4781C4F829D008A52C3 /* PlayerControllerView.swift */,
+				81BAA6DD1C619C92002DEF54 /* MainSplitViewController.swift */,
+				818554401C61A1CB00D0C1EB /* MovieListViewController.swift */,
+				816BAF321C61B38A007F6FC3 /* LabelCollectionViewItem.swift */,
+				816BAF331C61B38A007F6FC3 /* LabelCollectionViewItemView.swift */,
+				816BAF341C61B38A007F6FC3 /* LabelCollectionViewItem.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -81,6 +151,7 @@
 		811BB1C01C4A18CB0032F75D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */,
 				811BB1C71C4A1B9B0032F75D /* VLCKit.framework */,
 			);
 			name = Frameworks;
@@ -127,6 +198,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				811AE4771C4F8243008A52C3 /* PBXTargetDependency */,
 			);
 			name = "YouPlay-Mac";
 			productName = "YouPlay-Mac";
@@ -159,6 +231,12 @@
 			mainGroup = 812E2AA31C3788360007F852;
 			productRefGroup = 812E2AAD1C3788360007F852 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 811AE4661C4F8235008A52C3 /* Products */;
+					ProjectRef = 811AE4651C4F8235008A52C3 /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				812E2AAB1C3788360007F852 /* YouPlay-Mac */,
@@ -166,11 +244,43 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		811AE46D1C4F8235008A52C3 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 811AE46C1C4F8235008A52C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		811AE46F1C4F8235008A52C3 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 811AE46E1C4F8235008A52C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		811AE4711C4F8235008A52C3 /* SnapKit iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit iOS Tests.xctest";
+			remoteRef = 811AE4701C4F8235008A52C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		811AE4731C4F8235008A52C3 /* SnapKit OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit OSX Tests.xctest";
+			remoteRef = 811AE4721C4F8235008A52C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		812E2AAA1C3788360007F852 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816BAF371C61B38A007F6FC3 /* LabelCollectionViewItem.xib in Resources */,
 				812E2AB71C3788360007F852 /* Assets.xcassets in Resources */,
 				812E2ABA1C3788360007F852 /* Main.storyboard in Resources */,
 			);
@@ -183,14 +293,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				812E2AB21C3788360007F852 /* ViewController.swift in Sources */,
+				811AE4791C4F829D008A52C3 /* PlayerControllerView.swift in Sources */,
+				816BAF361C61B38A007F6FC3 /* LabelCollectionViewItemView.swift in Sources */,
 				812E2AB01C3788360007F852 /* AppDelegate.swift in Sources */,
+				81BAA6DE1C619C92002DEF54 /* MainSplitViewController.swift in Sources */,
 				812E2AB51C3788360007F852 /* YouPlay_Mac.xcdatamodeld in Sources */,
+				818554411C61A1CB00D0C1EB /* MovieListViewController.swift in Sources */,
 				811BB26B1C4CF90E0032F75D /* SwiftyJSON.swift in Sources */,
+				816BAF351C61B38A007F6FC3 /* LabelCollectionViewItem.swift in Sources */,
+				811AE4591C4F60A3008A52C3 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		811AE4771C4F8243008A52C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit OSX";
+			targetProxy = 811AE4761C4F8243008A52C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		812E2AB81C3788360007F852 /* Main.storyboard */ = {
@@ -290,6 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -307,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

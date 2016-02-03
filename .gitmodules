@@ -1,0 +1,6 @@
+[submodule "YouPlayCore"]
+	path = YouPlayCore
+	url = https://github.com/wujianguo/YouPlayCore.git
+[submodule "SnapKit"]
+	path = SnapKit
+	url = https://github.com/SnapKit/SnapKit.git
