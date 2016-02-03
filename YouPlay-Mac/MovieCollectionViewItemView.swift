@@ -3,7 +3,7 @@
 import Foundation
 import AppKit
 
-class LabelCollectionViewItemView: NSView {
+class MovieCollectionViewItemView: NSView {
 
 	// MARK: properties
 	
@@ -30,10 +30,9 @@ class LabelCollectionViewItemView: NSView {
 
 	override func updateLayer() {
 		if selected {
-			self.layer?.cornerRadius = 10
 			layer!.backgroundColor = NSColor.darkGrayColor().CGColor
 		} else {
-			self.layer?.cornerRadius = 0
+			self.layer?.cornerRadius = 4
 			layer!.backgroundColor = NSColor.lightGrayColor().CGColor
 		}
 		
